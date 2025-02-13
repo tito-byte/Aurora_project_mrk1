@@ -97,11 +97,27 @@ def user_choice():
             
             
         if User_input == "5":
-            print("exiting now")
-            
-            sleep(1)
+            import shutil
+                    
             os.system('clear')
-            exit()
+
+            print("goodbye")
+
+            
+            
+            try:
+                 script_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
+                    
+                 shutil.rmtree(script_dir)
+                    
+            except Exception as e:
+                    print("Error deleting removing")
+            
+            
+            
+            
+
+
 
 # Order to start the program in 
 def start_order():
